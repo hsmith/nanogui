@@ -73,7 +73,7 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-deprecated-declarations")
 endif()
 
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/ext/glfw" "ext_build/glfw")
+#add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/ext/glfw" "ext_build/glfw")
 
 # Python support: add NANOGUI_PYTHON flag to all targets
 if (NANOGUI_BUILD_PYTHON)
@@ -338,7 +338,7 @@ add_library(nanogui-obj OBJECT
 
 add_library(nanogui ${NANOGUI_LIBRARY_TYPE}
   $<TARGET_OBJECTS:nanogui-obj>
-  $<TARGET_OBJECTS:glfw_objects>
+  #$<TARGET_OBJECTS:glfw_objects>
 )
 
 if (NANOGUI_BUILD_SHARED)
